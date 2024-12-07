@@ -1,6 +1,7 @@
 <script setup>
 import {onMounted, ref} from "vue";
-  import ApiService from "@/foundation/api-service.js"
+import ApiService from "@/foundation/api-service.js"
+import {BAlert} from "bootstrap-vue-3";
 
   const message = ref('')
   onMounted(() => {
@@ -15,8 +16,11 @@ import {onMounted, ref} from "vue";
 </script>
 
 <template>
-  <main>
-<!--    <TheWelcome />-->
+  <div class="container">
     <p>{{ message }}</p>
-  </main>
+    <b-alert show variant="success">
+      BootstrapVue 3 が正常に動作しています！
+    </b-alert>
+    <b-button variant="secondary">プライマリボタン</b-button>
+  </div>
 </template>
